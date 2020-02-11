@@ -1,21 +1,5 @@
-import * as React from 'react'
+import useWindowDimensions from "./hooks/useWindowDimensions";
+import useWindowWidth from "./hooks/useWindowWidth";
+import useWindowHeight from "./hooks/useWindowHeight";
 
-export const useMyHook = () => {
-  let [{
-    counter
-  }, setState] = React.useState({
-    counter: 0
-  })
-
-  React.useEffect(() => {
-    let interval = window.setInterval(() => {
-      counter++
-      setState({counter})
-    }, 1000)
-    return () => {
-      window.clearInterval(interval)
-    }
-  }, [])
-
-  return counter
-}
+export { useWindowDimensions, useWindowWidth, useWindowHeight };
