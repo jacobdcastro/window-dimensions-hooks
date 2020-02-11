@@ -35,8 +35,8 @@ const MyComponent = () => {
   let width = useWindowWidth();
   return (
     <div>
-			Window width is {width}px.
-		</div>
+      Window width is {width}px.
+    </div>
   );
 };
 ```
@@ -54,8 +54,8 @@ const MyComponent = () => {
   let width = useWindowHeight();
   return (
     <div>
-			Window width is {width}px.
-		</div>
+      Window width is {width}px.
+    </div>
   );
 };
 ```
@@ -75,9 +75,9 @@ const MyComponent = () => {
   let { height, width } = useWindowDimensions();
   return (
     <div>
-			<p>Height is {height}px</p>
-			<p>Width is {width}px</p>
-		</div>
+      <p>Height is {height}px</p>
+      <p>Width is {width}px</p>
+    </div>
   );
 };
 ```
