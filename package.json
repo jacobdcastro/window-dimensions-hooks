@@ -1,6 +1,6 @@
 {
   "name": "window-dimensions-hooks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hooks for getting browser window dimensions.",
   "author": "Jacob D. Castro <jdcastro.business@gmail.com> (https://jacobdcastro.com)",
   "license": "MIT",
