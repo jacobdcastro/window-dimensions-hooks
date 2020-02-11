@@ -1,11 +1,11 @@
-import { useMyHook } from './'
+import { useWindowWidth } from "./";
 import { renderHook, act } from "@testing-library/react-hooks";
 
 // mock timer using jest
 jest.useFakeTimers();
 
-describe('useMyHook', () => {
-  it('updates every second', () => {
+describe("useMyHook", () => {
+  it("updates every second", () => {
     const { result } = renderHook(() => useMyHook());
 
     expect(result.current).toBe(0);
@@ -25,5 +25,5 @@ describe('useMyHook', () => {
 
     // Check after total 2 sec
     expect(result.current).toBe(2);
-  })
-})
+  });
+});
