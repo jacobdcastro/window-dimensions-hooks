@@ -1,12 +1,14 @@
-import React from 'react'
-import { useMyHook } from 'window-dimensions-hooks'
+import React from "react";
+import Dimensions from "./components/Dimensions";
+import Height from "./components/Height";
+import Width from "./components/Width";
 
-const App = () => {
-  const example = useMyHook()
-  return (
-    <div>
-      {example}
-    </div>
-  )
-}
-export default App
+const App = () => (
+  <div>
+    <Dimensions />
+    <Height />
+    <Width />
+  </div>
+);
+
+export default App;
