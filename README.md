@@ -1,6 +1,6 @@
 # window-dimensions-hooks
 
-> React hooks for getting browser window dimensions
+> React hooks for getting browser window dimensions, even during/after resizing
 
 [![NPM](https://img.shields.io/npm/v/window-dimensions-hooks.svg)](https://www.npmjs.com/package/window-dimensions-hooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -17,10 +17,9 @@ This module gives access to 3 different hooks.
 - `useWindowHeight`
 - `useWindowDimensions`
 
-All three hooks return number values represented by the `window.innerWidth` and `window.innerHeight` values. The hooks also live-update the variable when the window is resized.
+All three hooks give access to number values represented by the `window.innerWidth` and `window.innerHeight` property values. The hooks also live-update the variable when the window is resized.
 
-Note: All hooks are **named exports**. Therefore you must specify which hook you want to import using the object destructuring syntax, as shown in code examples below.
-
+_Note_: All hooks are **named exports**. Therefore you must specify which hook you want to import using the object destructuring syntax, as shown in code examples below.
 
 ### useWindowWidth()
 
@@ -51,7 +50,7 @@ import React from 'react';
 import { useWindowHeight } from 'window-dimensions-hooks';
 
 const MyComponent = () => {
-  let width = useWindowHeight();
+  let height = useWindowHeight();
   return (
     <div>
       Window height is {height}px.
@@ -64,7 +63,7 @@ const MyComponent = () => {
 
 Unlike the previous hooks, the `useWindowDimensions` hook returns an object with height and width key-value pairs. Therefore, you can use object destructuring to pull the height and width values from the object.
 
-Just as before, the values of the height/width properties are live-updated when the browser window is resized.
+Just as before, the values of the height/width keys in the object are live-updated when the browser window is resized.
 
 ```jsx
 import React from 'react';
