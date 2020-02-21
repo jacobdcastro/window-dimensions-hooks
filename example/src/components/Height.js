@@ -1,7 +1,7 @@
 import React from "react";
 import { useWindowHeight } from "window-dimensions-hooks";
 
-const Dimensions = () => {
+const Height = () => {
   const height = useWindowHeight();
   return (
     <>
@@ -13,4 +13,4 @@ const Dimensions = () => {
   );
 };
 
-export default Dimensions;
+export default Height;
