@@ -32,6 +32,10 @@ const getNewState = (state = defaultState, { resizeType, newDim }) => {
         ...state,
         width: newDim.width
       };
+    case "noChange":
+      return {
+        ...state
+      };
     default:
       return state;
   }
