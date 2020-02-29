@@ -19,7 +19,7 @@ const useWindowWidth = () => {
     }
   }, []);
 
-  return width;
+  return width ? width : 0;
 };
 
 export default useWindowWidth;

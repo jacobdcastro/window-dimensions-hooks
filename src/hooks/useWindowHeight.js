@@ -19,7 +19,7 @@ const useWindowHeight = () => {
     }
   }, []);
 
-  return height;
+  return height ? height : 0;
 };
 
 export default useWindowHeight;

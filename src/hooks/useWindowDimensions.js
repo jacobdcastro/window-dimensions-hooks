@@ -72,7 +72,12 @@ const useWindowDimensions = () => {
     }
   }, []);
 
-  return dimensions;
+  // check if dimensions key values are null before returning object
+  // if null, return 0 for values
+  for (var key in dimensions) {
+    if (dimensions[key] !== null) return dimensions;
+    else return { height: 0, width: 0 };
+  }
 };
 
 export default useWindowDimensions;
