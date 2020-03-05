@@ -1,69 +1,69 @@
 import * as React from "react";
 
-const defaultState = { height: null, width: null };
+const initialState = { height: null, width: null };
 
-const checkResizeType = (oldDim, newDim) => {
+const dispatchAction = (oldDim, newDim, dispatch) => {
   if (oldDim.height !== newDim.height) {
     if (oldDim.width !== newDim.width) {
-      return "xyChange";
+      dispatch({ type: "xyChange", newDim });
     } else {
-      return "yChange";
+      dispatch({ type: "yChange", height: newDim.height });
     }
   } else if (oldDim.width !== newDim.width) {
-    return "xChange";
+    dispatch({ type: "xChange", width: newDim.width });
   } else {
-    return "noChange";
+    dispatch({ type: "noChange" });
   }
 };
 
-const getNewState = (state = defaultState, { resizeType, newDim }) => {
-  switch (resizeType) {
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "initialSize":
+      return {
+        height: action.height,
+        width: action.width
+      };
     case "xyChange":
       return {
-        ...newDim
+        ...action.newDim
       };
     case "yChange":
       return {
         ...state,
-        height: newDim.height
+        height: action.height
       };
     case "xChange":
       return {
         ...state,
-        width: newDim.width
+        width: action.width
       };
     case "noChange":
       return {
         ...state
       };
     default:
-      return state;
+      throw new Error();
   }
 };
 
 // custom hook
 const useWindowDimensions = () => {
-  const [dimensions, setDimensions] = React.useState(defaultState);
+  const [dimensions, dispatch] = React.useReducer(reducer, initialState);
 
-  // sets height when window is resized (from event listener)
   const handleWindowResize = () => {
-    const newDim = {
-      height: window.innerHeight,
-      width: window.innerWidth
-    };
-    const resizeType = checkResizeType(dimensions, newDim);
-    const newState = getNewState(dimensions, { resizeType, newDim });
-    setDimensions(newState);
+    const newDim = { height: window.innerHeight, width: window.innerWidth };
+    dispatchAction(dimensions, newDim, dispatch);
   };
 
   React.useEffect(() => {
-    // only runs if in browser
+    // only run if in browser
     if (typeof window !== "undefined") {
-      setDimensions({
+      // dispatch initial size on component mount
+      dispatch({
+        type: "initialSize",
         height: window.innerHeight,
         width: window.innerWidth
       });
-
       window.addEventListener("resize", handleWindowResize, true);
 
       return () => {
@@ -73,7 +73,7 @@ const useWindowDimensions = () => {
   }, []);
 
   // check if dimensions key values are null before returning object
-  // if null, return 0 for values
+  // if null, return 0 for values (to prevent potential prop type errors)
   for (var key in dimensions) {
     if (dimensions[key] !== null) return dimensions;
     else return { height: 0, width: 0 };
