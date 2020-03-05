@@ -1,6 +1,5 @@
 import useWindowHeight from "../hooks/useWindowHeight";
 import { renderHook, act } from "@testing-library/react-hooks";
-import useWindowDimensions from "../hooks/useWindowDimensions";
 
 describe("useWindowHeight", () => {
   const { result } = renderHook(() => useWindowHeight());
