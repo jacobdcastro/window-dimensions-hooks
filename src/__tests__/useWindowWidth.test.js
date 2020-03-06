@@ -9,16 +9,14 @@ describe("useWindowWidth", () => {
     expect(width).not.toBeNull();
   });
 
+  it("to be a number value", () => {
+    expect(width).toEqual(expect.any(Number));
+  });
+
   it("initially matches window width", () => {
     expect(width).toBe(window.innerWidth);
   });
 
-  it("returns new value on window resize", () => {
-    const values = { first: width, second: null };
-    expect(values.first).toBe(window.innerWidth);
-    // TODO simulate window resize
-    // window.resizeTo(window.innerWidth, window.innerWidth - 200);
-    Object.assign(values, { second: width });
-    console.log(values);
-  });
+  // TODO simulate window resize
+  // it("returns new value on window resize", () => {});
 });
