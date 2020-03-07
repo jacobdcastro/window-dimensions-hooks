@@ -66,6 +66,7 @@
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-standard": "^3.1.0",
     "gh-pages": "^2.0.1",
+    "jest-watch-typeahead": "^0.4.2",
     "react": "^16.9.0",
     "react-scripts": "^3.4.0",
     "react-test-renderer": "^16.9.0",
@@ -79,5 +80,12 @@
   "bugs": {
     "url": "https://github.com/jacobdcastro/window-dimensions-hooks/issues"
   },
-  "homepage": "https://github.com/jacobdcastro/window-dimensions-hooks#readme"
+  "homepage": "https://github.com/jacobdcastro/window-dimensions-hooks#readme",
+  "jest": {
+    "verbose": true,
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ]
+  }
 }
