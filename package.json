@@ -80,12 +80,5 @@
   "bugs": {
     "url": "https://github.com/jacobdcastro/window-dimensions-hooks/issues"
   },
-  "homepage": "https://github.com/jacobdcastro/window-dimensions-hooks#readme",
-  "jest": {
-    "verbose": true,
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
-    ]
-  }
+  "homepage": "https://github.com/jacobdcastro/window-dimensions-hooks#readme"
 }
