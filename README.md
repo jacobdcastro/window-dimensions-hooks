@@ -2,7 +2,7 @@
 
 > React hooks for getting browser window dimensions, even during and after resizing
 
-[![NPM](https://img.shields.io/npm/v/window-dimensions-hooks.svg)](https://www.npmjs.com/package/window-dimensions-hooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)[![Build Status](https://travis-ci.org/jacobdcastro/window-dimensions-hooks.svg?branch=master)](https://travis-ci.org/jacobdcastro/window-dimensions-hooks)
+[![NPM](https://img.shields.io/npm/v/window-dimensions-hooks.svg)](https://www.npmjs.com/package/window-dimensions-hooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Build Status](https://travis-ci.org/jacobdcastro/window-dimensions-hooks.svg?branch=master)](https://travis-ci.org/jacobdcastro/window-dimensions-hooks)
 
 ## Install
 
