@@ -6,10 +6,10 @@
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "file:../node_modules/react",
-    "react-dom": "file:../node_modules/react-dom",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-scripts": "^3.0.1",
-    "window-dimensions-hooks": "file:../dist"
+    "window-dimensions-hooks": "file:.."
   },
   "scripts": {
     "start": "react-scripts start",
