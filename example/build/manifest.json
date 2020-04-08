@@ -1,0 +1,8 @@
+{
+  "short_name": "window-dimensions-hooks",
+  "name": "window-dimensions-hooks",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

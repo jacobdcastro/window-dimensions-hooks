@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/window-dimensions-hooks/static/css/main.24a6cd7c.chunk.css",
+    "main.js": "/window-dimensions-hooks/static/js/main.b0f207ff.chunk.js",
+    "main.js.map": "/window-dimensions-hooks/static/js/main.b0f207ff.chunk.js.map",
+    "runtime-main.js": "/window-dimensions-hooks/static/js/runtime-main.35d4094c.js",
+    "runtime-main.js.map": "/window-dimensions-hooks/static/js/runtime-main.35d4094c.js.map",
+    "static/js/2.32a47a17.chunk.js": "/window-dimensions-hooks/static/js/2.32a47a17.chunk.js",
+    "static/js/2.32a47a17.chunk.js.map": "/window-dimensions-hooks/static/js/2.32a47a17.chunk.js.map",
+    "index.html": "/window-dimensions-hooks/index.html",
+    "precache-manifest.192e4d6bab0d6c3e8340a1a352a401d6.js": "/window-dimensions-hooks/precache-manifest.192e4d6bab0d6c3e8340a1a352a401d6.js",
+    "service-worker.js": "/window-dimensions-hooks/service-worker.js",
+    "static/css/main.24a6cd7c.chunk.css.map": "/window-dimensions-hooks/static/css/main.24a6cd7c.chunk.css.map",
+    "static/js/2.32a47a17.chunk.js.LICENSE.txt": "/window-dimensions-hooks/static/js/2.32a47a17.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.35d4094c.js",
+    "static/js/2.32a47a17.chunk.js",
+    "static/css/main.24a6cd7c.chunk.css",
+    "static/js/main.b0f207ff.chunk.js"
+  ]
+}
