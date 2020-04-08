@@ -78,7 +78,7 @@ const MyComponent = () => {
 
 ## Thank You
 
-Thank you so much for checking out these hooks! Feel free to submit a PR or issue and I'll be happy to look into it! I love collaborating and I'm always happy to help you improve this package.
+Thank you so much for checking out these hooks! Feel free to submit a PR or issue and I'll be happy to look into it! I love collaborating and I'm always happy to have help improving this package.
 
 ## License
 
