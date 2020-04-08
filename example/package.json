@@ -9,7 +9,7 @@
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
     "react-scripts": "^3.0.1",
-    "window-dimensions-hooks": "file:.."
+    "window-dimensions-hooks": "file:../dist"
   },
   "scripts": {
     "start": "react-scripts start",
