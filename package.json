@@ -2,7 +2,11 @@
   "name": "window-dimensions-hooks",
   "version": "1.2.0",
   "description": "React hooks for getting browser window dimensions.",
-  "author": "Jacob D. Castro <jdcastro.business@gmail.com> (https://jacobdcastro.com)",
+  "author": {
+    "name": "Jacob D. Castro",
+    "email": "jdcastro.business@gmail.com",
+    "url": "https://jacobdcastro.com"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -13,9 +17,13 @@
     "hooks",
     "browser",
     "window",
-    "pixels"
+    "pixels",
+    "css-in-js"
   ],
   "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "engines": {
@@ -28,12 +36,11 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build",
+    "predeploy": "npm run build && cd example && npm install && npm run build",
     "postPublish": "git push --tags"
   },
   "peerDependencies": {
-    "react": ">=16.8.0"
+    "react": ">=16.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
