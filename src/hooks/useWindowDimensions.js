@@ -21,25 +21,25 @@ const reducer = (state, action) => {
     case "initialSize":
       return {
         height: action.height,
-        width: action.width
+        width: action.width,
       };
     case "xyChange":
       return {
-        ...action.newDim
+        ...action.newDim,
       };
     case "yChange":
       return {
         ...state,
-        height: action.height
+        height: action.height,
       };
     case "xChange":
       return {
         ...state,
-        width: action.width
+        width: action.width,
       };
     case "noChange":
       return {
-        ...state
+        ...state,
       };
     default:
       throw new Error();
@@ -62,7 +62,7 @@ const useWindowDimensions = () => {
       dispatch({
         type: "initialSize",
         height: window.innerHeight,
-        width: window.innerWidth
+        width: window.innerWidth,
       });
       window.addEventListener("resize", handleWindowResize, true);
 
@@ -73,7 +73,7 @@ const useWindowDimensions = () => {
   }, []);
 
   // check if dimensions key values are null before returning object
-  // if null, return 0 for values (to prevent potential prop type errors)
+  // if null, return 0 for values (to prevent potential type errors)
   for (var key in dimensions) {
     if (dimensions[key] !== null) return dimensions;
     else return { height: 0, width: 0 };
