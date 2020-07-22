@@ -12,9 +12,15 @@ const useWindowWidth = () => {
     if (typeof window !== "undefined") {
       setWidth(window.innerWidth); // sets initial width
       window.addEventListener("resize", handleWindowResize, true);
+      window.addEventListener("fullscreenchange", handleWindowResize, true);
 
       return () => {
         window.removeEventListener("resize", handleWindowResize, true);
+        window.removeEventListener(
+          "fullscreenchange",
+          handleWindowResize,
+          true
+        );
       };
     }
   }, []);

@@ -12,9 +12,15 @@ const useWindowHeight = () => {
     if (typeof window !== "undefined") {
       setheight(window.innerHeight); // sets initial height
       window.addEventListener("resize", handleWindowResize, true);
+      window.addEventListener("fullscreenchange", handleWindowResize, true);
 
       return () => {
         window.removeEventListener("resize", handleWindowResize, true);
+        window.removeEventListener(
+          "fullscreenchange",
+          handleWindowResize,
+          true
+        );
       };
     }
   }, []);

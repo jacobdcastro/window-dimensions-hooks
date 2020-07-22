@@ -21,25 +21,25 @@ const reducer = (state, action) => {
     case "initialSize":
       return {
         height: action.height,
-        width: action.width
+        width: action.width,
       };
     case "xyChange":
       return {
-        ...action.newDim
+        ...action.newDim,
       };
     case "yChange":
       return {
         ...state,
-        height: action.height
+        height: action.height,
       };
     case "xChange":
       return {
         ...state,
-        width: action.width
+        width: action.width,
       };
     case "noChange":
       return {
-        ...state
+        ...state,
       };
     default:
       throw new Error();
@@ -62,12 +62,18 @@ const useWindowDimensions = () => {
       dispatch({
         type: "initialSize",
         height: window.innerHeight,
-        width: window.innerWidth
+        width: window.innerWidth,
       });
       window.addEventListener("resize", handleWindowResize, true);
+      window.addEventListener("fullscreenchange", handleWindowResize, true);
 
       return () => {
         window.removeEventListener("resize", handleWindowResize, true);
+        window.removeEventListener(
+          "fullscreenchange",
+          handleWindowResize,
+          true
+        );
       };
     }
   }, []);
