@@ -33,7 +33,7 @@
     "postPublish": "git push --tags"
   },
   "peerDependencies": {
-    "react": ">=16.8.0"
+    "react": ">=16.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
