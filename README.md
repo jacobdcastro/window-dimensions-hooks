@@ -32,7 +32,7 @@ import React from "react";
 import { useWindowWidth } from "window-dimensions-hooks";
 
 const MyComponent = () => {
-  let width = useWindowWidth();
+  const width = useWindowWidth();
   return <div>Window width is {width}px.</div>;
 };
 ```
@@ -47,7 +47,7 @@ import React from "react";
 import { useWindowHeight } from "window-dimensions-hooks";
 
 const MyComponent = () => {
-  let height = useWindowHeight();
+  const height = useWindowHeight();
   return <div>Window height is {height}px.</div>;
 };
 ```
@@ -64,7 +64,7 @@ import React from "react";
 import { useWindowDimensions } from "window-dimensions-hooks";
 
 const MyComponent = () => {
-  let { height, width } = useWindowDimensions();
+  const { height, width } = useWindowDimensions();
   return (
     <div>
       <p>Window height is {height}px</p>
